@@ -1,1 +1,23 @@
-('\n<!DOCTYPE html>\n<html>\n    <body>\n        <p>', '1427', '</p>\n        <hr>\n        <p id="b"></p>\n        <script>\n            if (window.localStorage.getItem(\'counter\')){\n                var time = window.localStorage.getItem(\'counter\')\n            } else {\n                var time = 120\n            }\n            \n            \n            function animate() {\n                if (time <= 0){\n                    time = 120\n                    location.reload()\n                } else {\n                    document.getElementById("b").innerHTML = time\n                }\n                \n                setTimeout(function(){\n                    time -= 1\n                    window.requestAnimationFrame(animate)\n                }, 1000);\n                window.localStorage.setItem(\'counter\', time);\n            }\n            window.requestAnimationFrame(animate)\n        </script>\n    </body>\n</html>\n')
+<!DOCTYPE html><html><body><p>487</p><hr><p id="b"></p><script>
+            if (window.localStorage.getItem("counter")){
+                var time = window.localStorage.getItem('counter')
+            } else {
+                var time = 120
+            }
+            
+            
+            function animate() {
+                if (time <= 0){
+                    time = 120
+                    location.reload()
+                } else {
+                    document.getElementById("b").innerHTML = time
+                }
+                setTimeout(function(){
+                    time -= 1
+                    window.requestAnimationFrame(animate)
+                }, 1000);
+                window.localStorage.setItem("counter", time);
+            }
+            window.requestAnimationFrame(animate)
+        </script></body></html>
